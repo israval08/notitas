@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #666;
+    color: rgb(5, 5, 5);
+}
+
+.post {
+    -webkit-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+}
+
+.post:nth-child(even) .post {
+    -o-transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    position: relative;
+    top: 5px;
+    background: #cfc;
+}
+
+.post:nth-child(3n) a {
+    -o-transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    position: relative;
+    top: -5px;
+}
+
+.post:nth-child(5n) a {
+    -o-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    position: relative;
+    top: -10px;
+}
+
+.post:hover,
+.post:focus {
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+    -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+    -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    position: relative;
+    z-index: 5;
+    transform: scale(1.25);
+}
+
+.post {
+    width: 290px;
+    height: 290px;
+    margin: 5vh auto;
+    background-color: bisque;
+    padding-left: 10px;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.importante {
+    background-color: rgb(207, 110, 110);
+    transform: rotate(4deg);
+    color: #000;
+    margin: 0 20px;
+}
+
+.btnEliminar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #000;
+}
+
+#contenedorPrincipal {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+}
+
+#notas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .gridtwo {
+        grid-template-columns: 1fr;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+    #notas {
+        text-align: center;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #notas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
